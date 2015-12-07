@@ -1,0 +1,30 @@
+<div ng-show="finished">
+    <h1>{{vehicle.name}}</h1>
+    <div class="medium-4 columns">
+        <img class="full th" ng-src="images/vehicles/{{vehicle.id}}.jpg" alt="{{vehicle.name}} Image">
+    </div>
+    <div class="medium-8 columns">
+        <p>Model: <strong>{{vehicle.model}}</strong>
+        </p>
+        <p>Manufacturer: {{vehicle.manufacturer}}</p>
+        <p>Cost (credits): {{vehicle.cost_in_credits}}</p>
+        <p>Length: {{vehicle.length}}m</p>
+        <p>Max Speed: {{vehicle.max_atmosphering_speed}}km/h</p>
+        <p>Crew: {{vehicle.crew}}</p>
+        <p>Passangers: {{vehicle.passengers}}</p>
+        <p>Cargo Capacity: {{vehicle.cargo_capacity}}</p>
+        <p>Consumables: {{vehicle.consumables}}</p>
+    </div>
+    <div class="medium-6 columns">
+        <light-card data="films" category="Films" url="films"></light-card>
+    </div>
+    <div class="medium-6 columns" ng-show="pilots.length > 0">
+        <div class="light-card">
+            <h4>Pilots</h4>
+            <ul>
+                <li class="list" ng-repeat="pilot in pilots"><a ng-href="#/people/{{pilot.id}}">{{pilot.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

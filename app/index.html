@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Star Wars Database</title>
+    <meta name="description" content="A complete Star Wars Database created using the SWAPI API. Browse through the films, characters, starships and planets.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-app="starWarsApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="tab-bar">
+                <section class="left-small">
+                    <a href="" class="left-off-canvas-toggle menu-icon"><span></span></a>
+                </section>
+            </nav>
+            <aside class="left-off-canvas-menu">
+                <ul class="off-canvas-list" id="leftMenu">
+                    <li><label>Star Wars Database</label>
+                    </li>
+                     <li class="active"><a href="#/">Home</a>
+                    </li>
+                    <li><a ng-href="#/films">Films</a>
+                    </li>
+                    <li><a ng-href="#/people">People</a>
+                    </li>
+                    <li><a ng-href="#/planets">Planets</a>
+                    </li>
+                    <li><a ng-href="#/starships">Starships</a>
+                    </li>
+                    <li><a ng-href="#/vehicles">Vehicles</a>
+                    </li>
+                    <li><a ng-href="#/species">Species</a>
+                    </li>
+                </ul>
+                <div class="menu-footer">
+                    <p>Forbes made this using</p>
+                    <p><a href="http://swapi.co" target="_blank">The Swapi API</a></p>
+                </div>
+            </aside>
+            <section class="main-section">
+                <div class="row">
+                    <div ng-view=""></div>
+                </div>
+            </section>
+            <a class="exit-off-canvas"></a>
+        </div>
+    </div>
+    
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        ! function (A, n, g, u, l, a, r) {
+            A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+        }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="bower_components/foundation/js/foundation.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/people.js"></script>
+    <script src="scripts/services/swapi.js"></script>
+    <script src="scripts/controllers/person.js"></script>
+    <script src="scripts/directives/person.js"></script>
+    <script src="scripts/directives/light-card.js"></script>
+    <script src="scripts/controllers/films.js"></script>
+    <script src="scripts/controllers/film.js"></script>
+    <script src="scripts/controllers/planets.js"></script>
+    <script src="scripts/controllers/planet.js"></script>
+    <script src="scripts/controllers/starships.js"></script>
+    <script src="scripts/controllers/starship.js"></script>
+    <script src="scripts/controllers/vehicles.js"></script>
+    <script src="scripts/controllers/vehicle.js"></script>
+    <script src="scripts/controllers/species.js"></script>
+    <script src="scripts/controllers/spec.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+        $(document).foundation({
+          offcanvas : {
+            // Sets method in which offcanvas opens.
+            // [ move | overlap_single | overlap ]
+            open_method: 'move', 
+            // Should the menu close when a menu link is clicked?
+            // [ true | false ]
+            close_on_click : true
+          }
+        });
+    </script>
+</body>
+
+</html>

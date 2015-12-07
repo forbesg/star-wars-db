@@ -1,0 +1,53 @@
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title>Star Wars Database</title> <meta name="description" content="A complete Star Wars Database created using the SWAPI API. Browse through the films, characters, starships and planets."> <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.00f63aa5.css"> <link rel="stylesheet" href="styles/main.b5096708.css">  
+
+<body ng-app="starWarsApp"> 
+<!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="off-canvas-wrap" data-offcanvas> 
+<div class="inner-wrap"> 
+<nav class="tab-bar"> 
+<section class="left-small"> 
+<a href="" class="left-off-canvas-toggle menu-icon"><span></span></a> 
+</section> 
+</nav> 
+<aside class="left-off-canvas-menu"> 
+<ul class="off-canvas-list" id="leftMenu"> 
+<li><label>Star Wars Database</label> </li> <li class="active"><a href="#/">Home</a> </li> 
+<li><a ng-href="#/films">Films</a> </li> <li><a ng-href="#/people">People</a> </li> 
+<li><a ng-href="#/planets">Planets</a> </li> 
+<li><a ng-href="#/starships">Starships</a> </li> 
+<li><a ng-href="#/vehicles">Vehicles</a> </li> 
+<li><a ng-href="#/species">Species</a> </li> 
+</ul> 
+<div class="menu-footer"> 
+<p>Forbes made this using</p> 
+<p><a href="http://swapi.co" target="_blank">The Swapi API</a></p> 
+</div> 
+</aside> 
+<section class="main-section"> 
+<div class="row"> <div ng-view=""></div> 
+</div> 
+</section> 
+<a class="exit-off-canvas"></a> 
+</div> 
+</div>
+<script src="scripts/vendor.e3051cb9.js"></script> 
+<script src="scripts/scripts.5ee86519.js"></script> 
+<script type="text/javascript">
+	$(document).foundation({
+          offcanvas : {
+            // Sets method in which offcanvas opens.
+            // [ move | overlap_single | overlap ]
+            open_method: 'move', 
+            // Should the menu close when a menu link is clicked?
+            // [ true | false ]
+            close_on_click : true
+          }
+        });
+</script>
+<script type="text/javascript">
+            app.initialize();
+        </script>
+</body>

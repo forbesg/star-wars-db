@@ -1,0 +1,31 @@
+<div ng-show="finished">
+    <h1>{{spec.name}}</h1>
+    <div class="medium-4 columns">
+        <img class="full th" ng-src="images/people/{{people[0].id}}.jpg" alt="{{spec.name}} Image">
+    </div>
+    <div class="medium-8 columns">
+        <p>Classification: <strong>{{spec.classification}}</strong>
+        </p>
+        <p>Designation: {{spec.designation}}</p>
+        <p>Average Height: {{spec.average_height}}</p>
+        <p>Skin Colours: {{spec.skin_colors}}</p>
+        <p>Hair Colours: {{spec.hair_colors}}</p>
+        <p>Eye Colours: {{spec.eye_colors}}</p>
+        <p>Average Lifespan: {{spec.average_lifespan}}</p>
+        <p>Homeworld: <a ng-href="#/planets/{{homeworld.id}}">{{homeworld.name}}</a>
+        </p>
+        <p>Language: {{spec.language}}</p>
+    </div>
+    <div class="medium-6 columns">
+        <light-card data="films" category="Films" url="films"></light-card>
+    </div>
+    <div class="medium-6 columns">
+        <div class="light-card">
+            <h4>People</h4>
+            <ul>
+                <li class="list" ng-repeat="person in people"><a ng-href="#/people/{{person.id}}">{{person.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

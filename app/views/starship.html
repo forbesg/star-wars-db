@@ -1,0 +1,34 @@
+<div ng-show="finished">
+    <h1>{{starship.name}}</h1>
+    <div class="medium-4 columns">
+        <img class="full th" ng-src="images/starships/{{starship.id}}.jpg" alt="{{starship.name}} Image">
+    </div>
+    <div class="medium-8 columns">
+        <p>Model: <strong>{{starship.model}}</strong>
+        </p>
+        <p>Starchip Class: <strong>{{starship.starship_class}}</strong>
+        </p>
+        <p>Manufacturer: {{starship.manufacturer}}</p>
+        <p>Cost (credits): {{starship.cost_in_credits}}</p>
+        <p>Length: {{starship.length}}m</p>
+        <p>Max Atmospheric Speed: {{starship.max_atmosphering_speed}}km/h</p>
+        <p>Crew: {{starship.crew}}</p>
+        <p>Passangers: {{starship.passengers}}</p>
+        <p>Cargo Capacity: {{starship.cargo_capacity}}</p>
+        <p>Consumables: {{starship.consumables}}</p>
+        <p>HyperDrive Rating: {{starship.hyperdrive_rating}}</p>
+        <p>MGLT: {{starship.hyperdrive_rating}} MGLT</p>
+    </div>
+    <div class="medium-6 columns">
+       <light-card data="films" category="Films" url="films"></light-card>
+    </div>
+    <div class="medium-6 columns" ng-show="pilots.length > 0">
+        <div class="light-card">
+            <h4>Pilots</h4>
+            <ul>
+                <li class="list" ng-repeat="pilot in pilots"><a ng-href="#/people/{{pilot.id}}">{{pilot.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
