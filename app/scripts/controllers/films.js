@@ -19,5 +19,5 @@ angular.module('starWarsApp')
             });
         }, function (err) {
             console.log(err);
-        })
+        });
   });

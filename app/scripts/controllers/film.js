@@ -1,3 +1,4 @@
+'use strict';
 angular.module('starWarsApp')
 .controller('FilmCtrl', function ($scope, $routeParams, SwapiFactory) {
     var filmId = $routeParams.id;
@@ -27,9 +28,9 @@ angular.module('starWarsApp')
                         console.error(err);
                     });
             });
-            
+
             $scope.finished = true;
         }, function (err) {
             console.error(err);
-        })
+        });
 });

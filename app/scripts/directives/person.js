@@ -11,10 +11,8 @@ angular.module('starWarsApp')
     return {
       templateUrl: 'views/templates/people.tpl.html',
       restrict: 'E',
-      link: function postLink(scope, element, attrs) {
+      link: function postLink(scope) {
           scope.id = scope.person.url.match(/\d+/)[0];
       }
     };
   });
-
-

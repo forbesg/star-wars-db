@@ -27,5 +27,5 @@ angular.module('starWarsApp')
                 console.error(err);
             });
         }
-    getStarships('http://swapi.co/api/starships')
+    getStarships('http://swapi.co/api/starships');
   });
