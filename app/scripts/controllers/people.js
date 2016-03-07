@@ -17,7 +17,7 @@ angular.module('starWarsApp')
                 res.data.results.forEach(function (item) {
                     $scope.data.push(item);
                     $scope.progress = $scope.data.length / res.data.count * 100;
-                })
+                });
                 if (res.data.next) {
                     getPeople(res.data.next);
                 }
@@ -25,7 +25,7 @@ angular.module('starWarsApp')
                 console.error(err);
             });
     }
-    
+
     getPeople('http://swapi.co/api/people');
-    
+
   });
